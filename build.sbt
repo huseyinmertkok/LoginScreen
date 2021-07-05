@@ -15,14 +15,14 @@ libraryDependencies ++= Seq(
   "org.postgresql" % "postgresql" % "9.3-1102-jdbc4"
 )
 
-libraryDependencies += "com.typesafe.play" %% "play-slick" % "4.0.0"
-
+//libraryDependencies += "com.typesafe.play" %% "play-slick" % "4.0.0"
+/*
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick" % "4.0.0",
   "com.typesafe.play" %% "play-slick-evolutions" % "4.0.0",
   "com.typesafe.slick" %% "slick-codegen" % "3.3.2"
 )
-
+*/
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "project1.controllers._"
 
