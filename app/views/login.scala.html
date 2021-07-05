@@ -1,0 +1,35 @@
+@()(implicit flash: Flash)
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project1</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.versioned("stylesheets/login.css")">
+    </head>
+        <form method="post" action="validateLoginPost1">
+           <h3>Log in</h3>
+            Username: <label>
+            <input type="text" name="username">
+        </label>
+                <br>
+            Password: <label>
+            <input type="password" name="password">
+        </label>
+                <br>
+            <input type="submit">
+       </form>
+
+    <form method="post" action="createUser1">
+        <h3>Register</h3>
+        Username: <label>
+        <input type="text" name="username">
+    </label>
+        <br>
+        Password: <label>
+        <input type="password" name="password">
+    </label>
+        <br>
+        <input type="submit">
+    </form>
+    @flash.get("error")
+</html>
