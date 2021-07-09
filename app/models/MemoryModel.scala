@@ -23,7 +23,7 @@ object MemoryModel {
           usname = rs.getString("username")
           passw = rs.getString("pass")
         }
-        check = usname.equals(username) && password.equals(password)
+        check = usname.equals(username) && passw.equals(password)
       }
       check
     } finally {
@@ -49,7 +49,7 @@ object MemoryModel {
           usname = rs.getString("username")
           passw = rs.getString("pass")
         }
-        check = usname.equals(username) && password.equals(password)
+        check = usname.equals(username)
       }
 
       if(check) false

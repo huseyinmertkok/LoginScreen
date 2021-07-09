@@ -24,9 +24,10 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
     val postvals = request.body.asFormUrlEncoded
     postvals.map{args=>
       val username = args("username").head
+      println(username)
       val password = args("password").head
       if(MemoryModel.validateUser(username,password))
-        Ok(s"$username logged in with $password")
+        Redirect(routes.WebSocketController.index(username))
       else
         Redirect(routes.HomeController.login()).flashing("error" -> "Invalid username or password")
 
@@ -38,6 +39,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
 
     postvals.map{args=>
       val username = args("username").head
+      println(username)
       val password = args("password").head
       if(MemoryModel.createUser(username,password))
         Redirect(routes.HomeController.login()).flashing("error" -> "Register complete")
